@@ -32,14 +32,14 @@ localStorage.setItem("localeInfo", currentLocale);
         }
         currentMenu = menus[locale];
 
-
-
         // Change the logo link
-        var logo_link = "//learn.nextu.com";
+        var base_url = "//learn.nextu.com";
+        var forum_url = "//forum.nextu.com";
         if (/(stg)/i.test(window.location.href)) {
-          logo_link = "//learn.stg.nextu.com";
+          base_url = "//learn.stg.nextu.com";
+          forum_url = "//forum-stg.nextu.com";
         }
-        $('.d-header .wrap .contents .title a').attr("href", logo_link);
+        $('.d-header .wrap .contents .title a').attr("href", base_url);
 
 
         // Fix the style for clear fix
@@ -48,26 +48,26 @@ localStorage.setItem("localeInfo", currentLocale);
         // Add the top header menu
         $headerMenuObj = $(`<ul class="nav nav_icons navbar-nav">
                     <li>
-                        <a href="https://learn.nextu.com" class="nav-li-home">
+                        <a href="${base_url}" class="nav-li-home">
                             <span class="hidden-sm"><img src="//learn-static.nextu.com/theme/cerulean/pix/icon-home.png" alt="home" style="height:20px;width:auto;top:-2px;">` + currentMenu[0] + `</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="https://learn.nextu.com/local/nextu_structure/certificates.php" class="nav-li-your-certs">
+                        <a href="${base_url}/local/nextu_structure/certificates.php" class="nav-li-your-certs">
                             <span class="hidden-sm"><img src="//learn-static.nextu.com/theme/cerulean/pix/icon-cap.png" alt="cap" style="height:20px;width:auto;top:-2px;">` + currentMenu[1] + `</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="https://learn.nextu.com/local/tutorcafe" class="nav-li-tutor-cafe">
+                        <a href="${base_url}/local/tutorcafe" class="nav-li-tutor-cafe">
                             <span class="hidden-sm" data-identifyelement="3"><img src="//learn-static.nextu.com/theme/cerulean/pix/icon-cafe.png" alt="cafe"
                                     style="height:24px;width:auto;top:-3px;">` + currentMenu[2] + `</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="//forum.nextu.com" style="color: #19e77a;">
+                        <a href="${forum_url}" style="color: #19e77a;">
                             <span class="hidden-sm"><img src="//learn-static.nextu.com/theme/cerulean/pix/nu_forum_icon.png" alt="cafe" style="height:24px;width:auto;top:-1px;">` + currentMenu[3] + `</span>
                         </a>
                     </li>
