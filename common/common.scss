@@ -1,3 +1,47 @@
+@font-face {
+    font-family: 'nextu';
+    src:  url('https://cdn.nextu.com/fonts/nextu.eot?dukdu');
+    src:  url('https://cdn.nextu.com/fonts/nextu.eot?dukdu#iefix') format('embedded-opentype'),
+      url('https://cdn.nextu.com/fonts/nextu.ttf?dukdu') format('truetype'),
+      url('https://cdn.nextu.com/fonts/nextu.woff?dukdu') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="nu-"], [class*=" nu-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'nextu' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .nu-admin:before {
+    content: "\e905";
+  }
+  .nu-certificates:before {
+    content: "\e900";
+  }
+  .nu-tutorcafe:before {
+    content: "\e901";
+  }
+  .nu-profile:before {
+    content: "\e902";
+  }
+  .nu-forum:before {
+    content: "\e903";
+  }
+  .nu-home:before {
+    content: "\e904";
+  }
+
 /* use Roboto font */
 html {
     font-family: "Roboto", sans-serif;
