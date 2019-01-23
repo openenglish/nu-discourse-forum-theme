@@ -134,8 +134,9 @@ header.d-header {
     display: flex;
     margin-bottom: 0;
     list-style: none;
-    font-size: 1.143rem;
-    margin: 0 -15px;
+    font-size: 1.15rem;
+    margin: 0 -14px;
+    padding-top: 2px;
 
     > li a {
         color: #fff;
@@ -145,9 +146,9 @@ header.d-header {
         padding-right: 0.95em;
 
         i {
-            font-size: 1.4em;
+            font-size: 1.45em;
             vertical-align: sub;
-            margin-right: .3em;
+            margin-right: .35em;
             opacity: .6;
         }
     }
