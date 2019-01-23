@@ -85,43 +85,14 @@ header.d-header {
 
 .navbar-nav {
     display: flex;
-    float: left;
-    /* flex: 1; */
     margin-bottom: 0;
-    justify-content: center;
-    width: 640px;
-}
+    list-style: none;
 
-.navbar-nav {
-    /* margin-left: 0 !important; */
-}
-
-.navbar-nav:first-child {
-    display: block !important;
-}
-
-.nav_icons.navbar-nav {
-    /* width: 800px; */
-}
-
-.nav_icons.navbar-nav.nav-right {
-    float: left !important;
-}
-
-.nav>li {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.nav_icons li:last-child {
-    margin-right: 0;
-}
-
-.navbar-nav>li>a {
-    color: #fff;
-    font-weight: 400;
-    font-size: 16px;
+    > li a {
+        color: #fff;
+        font-weight: 400;
+        font-size: 1rem; 
+    }
 }
 
 .navbar-nav>li>a img,
