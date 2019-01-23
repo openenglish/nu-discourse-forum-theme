@@ -1,4 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
+
 <script type="text/discourse-plugin" version="0.8.13">
     let currentLocale = I18n.currentLocale();
 
@@ -49,26 +51,25 @@ localStorage.setItem("localeInfo", currentLocale);
         $headerMenuObj = $(`<ul class="nav nav_icons navbar-nav">
                     <li>
                         <a href="${base_url}" class="nav-li-home">
-                            <span class="hidden-sm"><img src="//learn-static.nextu.com/theme/cerulean/pix/icon-home.png" alt="home" style="height:20px;width:auto;top:-2px;">` + currentMenu[0] + `</span>
+                            <i class="nu-home"></i>` + currentMenu[0] + `
                         </a>
                     </li>
 
                     <li>
                         <a href="${base_url}/local/profile/" class="nav-li-your-certs">
-                            <span class="hidden-sm"><img src="//learn-static.nextu.com/theme/cerulean/pix/icon-cap.png" alt="cap" style="height:20px;width:auto;top:-2px;">` + currentMenu[1] + `</span>
+                            <i class="nu-profile"></i>` + currentMenu[1] + `
                         </a>
                     </li>
 
                     <li>
                         <a href="${base_url}/local/tutorcafe/" class="nav-li-tutor-cafe">
-                            <span class="hidden-sm" data-identifyelement="3"><img src="//learn-static.nextu.com/theme/cerulean/pix/icon-cafe.png" alt="cafe"
-                                    style="height:24px;width:auto;top:-3px;">` + currentMenu[2] + `</span>
+                            <i class="nu-tutorcafe"></i>` + currentMenu[2] + `
                         </a>
                     </li>
 
                     <li>
                         <a href="${forum_url}" style="color: #19e77a;">
-                            <span class="hidden-sm"><img src="//learn-static.nextu.com/theme/cerulean/pix/nu_forum_icon.png" alt="cafe" style="height:24px;width:auto;top:-1px;">` + currentMenu[3] + `</span>
+                            <i class="nu-forum"></i>` + currentMenu[3] + `
                         </a>
                     </li>
 

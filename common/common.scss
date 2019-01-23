@@ -1,3 +1,47 @@
+@font-face {
+    font-family: 'nextu';
+    src:  url($NextuEOT);
+    src:  url($NextuEOT) format('embedded-opentype'),
+      url($NextuTTF) format('truetype'),
+      url($NextuWOFF) format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="nu-"], [class*=" nu-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'nextu' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .nu-admin:before {
+    content: "\e905";
+  }
+  .nu-certificates:before {
+    content: "\e900";
+  }
+  .nu-tutorcafe:before {
+    content: "\e901";
+  }
+  .nu-profile:before {
+    content: "\e902";
+  }
+  .nu-forum:before {
+    content: "\e903";
+  }
+  .nu-home:before {
+    content: "\e904";
+  }
+
 /* use Roboto font */
 html {
     font-family: "Roboto", sans-serif;
@@ -22,7 +66,6 @@ section#main {
 /* Custom Header */
 header.d-header {
     /* min-height: 4.2857em; */
-    min-height: 82px;
     height: unset;
     position: relative !important;
     top: 0;
@@ -41,6 +84,7 @@ header.d-header {
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
+    font-family: "Lato", sans-serif;
 }
 
 @media (max-width: 1039px) {
@@ -61,23 +105,25 @@ header.d-header {
     height: 100%;
     width: 100%;
     margin: 0;
+    padding: 0.4572rem 0;
 
     .title {
-        /* width: 15%!important; */
-        display: flex;
-        flex: 1 1;
-        max-width: unset;
-        height: unset;
 
         > a {
-            margin: 22px 0 10px 0;
-            width: 130px;
-            height: 50px;
-            display: flex;
+            box-sizing: border-box;
+            height: 4.572rem;
+            padding: 1.143rem;
+            margin-right: 1.143rem;
+            margin-left: -15px;
 
-            img {
-                width: 100%;
-                max-height: 34.59px !important;
+            @media (min-width: 992px) {
+                margin-right: 3.429rem;
+            }
+
+            img#site-logo {
+                height: 100%;
+                max-height: unset;
+                max-width: unset;
             }
         }
     }
@@ -85,43 +131,26 @@ header.d-header {
 
 .navbar-nav {
     display: flex;
-    float: left;
-    /* flex: 1; */
     margin-bottom: 0;
-    justify-content: center;
-    width: 640px;
-}
+    list-style: none;
+    font-size: 1.15rem;
+    margin: 0 -14px;
+    padding-top: 4px;
 
-.navbar-nav {
-    /* margin-left: 0 !important; */
-}
+    > li a {
+        color: #fff;
+        font-weight: 400;
+        font-size: 0.9em; 
+        padding-left: 1em;
+        padding-right: 1.05em;
 
-.navbar-nav:first-child {
-    display: block !important;
-}
-
-.nav_icons.navbar-nav {
-    /* width: 800px; */
-}
-
-.nav_icons.navbar-nav.nav-right {
-    float: left !important;
-}
-
-.nav>li {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.nav_icons li:last-child {
-    margin-right: 0;
-}
-
-.navbar-nav>li>a {
-    color: #fff;
-    font-weight: 400;
-    font-size: 16px;
+        i {
+            font-size: 1.45em;
+            vertical-align: sub;
+            margin-right: .35em;
+            opacity: .6;
+        }
+    }
 }
 
 .navbar-nav>li>a img,
@@ -162,17 +191,16 @@ header.d-header {
 }
 
 @media (min-width: 768px) {
+
+
     .nav_icons.navbar-nav {
         /* margin: 0 auto;
         float: none;
         display: table-cell;
         padding-left: 0; */
     }
-
-    ul.nav_icons li {
-        margin-right: 20px;
-    }
 }
+
 
 @media (max-width: 991px) {
     .nav_icons.navbar-nav {
@@ -183,32 +211,14 @@ header.d-header {
 @media (max-width: 840px) {
     .nav_icons.navbar-nav {}
 
-    ul.nav_icons li {
-        margin-right: 10px;
-    }
 
     .navbar-nav>li>a.usermenu {
         margin-right: -15px;
     }
 
-    ul.nav.navbar-nav.navbar-right {
-        max-width: 210px;
-    }
 }
 
-@media (max-width: 1060px) {
-    .d-header .wrap .contents,
-    .d-header .wrap .contents .title {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .navbar-nav {
-        margin: 0 0 10px 0;
-        flex-wrap: wrap;
-        width: 100vw;
-    }
-}
 
 @media (max-width: 580px) {
     .navbar-nav {
