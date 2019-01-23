@@ -112,6 +112,16 @@ header.d-header {
             box-sizing: border-box;
             height: 4.572rem;
             padding: 1.143rem;
+            margin-right: 1.143rem;
+
+            @media (min-width: 768px) {
+                margin-left: -15px;
+            }
+
+            @media (min-width: 992px) {
+                margin-right: 3.429rem;
+            }
+
             img#site-logo {
                 height: 100%;
             }
@@ -124,7 +134,8 @@ header.d-header {
     margin-bottom: 0;
     list-style: none;
     font-size: 1.143rem;
-
+    margin: 0;
+    
     > li a {
         color: #fff;
         font-weight: 400;
@@ -180,9 +191,6 @@ header.d-header {
 
 @media (min-width: 768px) {
 
-    .d-header .wrap .contents .title > a {
-        margin-left: -15px;
-    }
 
     .nav_icons.navbar-nav {
         /* margin: 0 auto;
@@ -191,6 +199,7 @@ header.d-header {
         padding-left: 0; */
     }
 }
+
 
 @media (max-width: 991px) {
     .nav_icons.navbar-nav {
