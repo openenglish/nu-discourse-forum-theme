@@ -136,6 +136,11 @@ header.d-header {
         color: #fff;
         font-weight: 400;
         font-size: 1rem; 
+
+        i {
+            font-size: 1.3rem;
+            vertical-align: sub;
+        }
     }
 }
 
