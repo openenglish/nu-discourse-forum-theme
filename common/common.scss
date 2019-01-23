@@ -114,10 +114,7 @@ header.d-header {
             height: 4.572rem;
             padding: 1.143rem;
             margin-right: 1.143rem;
-
-            @media (min-width: 768px) {
-                margin-left: -15px;
-            }
+            margin-left: -15px;
 
             @media (min-width: 992px) {
                 margin-right: 3.429rem;
