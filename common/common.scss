@@ -106,19 +106,19 @@ header.d-header {
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 0.4572rem 0;
+    padding: 0.4rem 0;
 
     .title {
 
         > a {
             box-sizing: border-box;
-            height: 4.572rem;
-            padding: 1.143rem;
-            margin-right: 1.143rem;
+            height: 4rem;
+            padding: 1rem;
+            margin-right: 1rem;
             margin-left: -15px;
 
             @media (min-width: 992px) {
-                margin-right: 3.429rem;
+                margin-right: 3rem;
             }
 
             img#site-logo {
@@ -134,21 +134,20 @@ header.d-header {
     display: flex;
     margin-bottom: 0;
     list-style: none;
-    font-size: 1.15rem;
     margin: 0 -14px;
     padding-top: 4px;
 
     > li a {
         color: #fff;
         font-weight: 400;
-        font-size: 0.9em; 
-        padding-left: 1em;
-        padding-right: 1.05em;
+        font-size: 0.9rem; 
+        padding-left: 1rem;
+        padding-right: 1rem;
 
         i {
-            font-size: 1.45em;
+            font-size: 1.3rem;
             vertical-align: sub;
-            margin-right: .35em;
+            margin-right: .3rem;
             opacity: .6;
         }
     }
