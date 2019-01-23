@@ -212,17 +212,11 @@ header.d-header {
 @media (max-width: 840px) {
     .nav_icons.navbar-nav {}
 
-    ul.nav_icons li {
-        margin-right: 10px;
-    }
 
     .navbar-nav>li>a.usermenu {
         margin-right: -15px;
     }
 
-    ul.nav.navbar-nav.navbar-right {
-        max-width: 210px;
-    }
 }
 
 
