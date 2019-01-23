@@ -225,19 +225,7 @@ header.d-header {
     }
 }
 
-@media (max-width: 1060px) {
-    .d-header .wrap .contents,
-    .d-header .wrap .contents .title {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .navbar-nav {
-        margin: 0 0 10px 0;
-        flex-wrap: wrap;
-        width: 100vw;
-    }
-}
 
 @media (max-width: 580px) {
     .navbar-nav {
