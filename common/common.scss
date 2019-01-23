@@ -104,6 +104,7 @@ header.d-header {
     height: 100%;
     width: 100%;
     margin: 0;
+    padding: 0.4572rem 0;
 
     .title {
 
@@ -178,6 +179,11 @@ header.d-header {
 }
 
 @media (min-width: 768px) {
+
+    .d-header .wrap .contents .title > a {
+        margin-left: -15px;
+    }
+
     .nav_icons.navbar-nav {
         /* margin: 0 auto;
         float: none;
