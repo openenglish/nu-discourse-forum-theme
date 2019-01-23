@@ -131,15 +131,20 @@ header.d-header {
     display: flex;
     margin-bottom: 0;
     list-style: none;
+    font-size: 1.143rem;
 
     > li a {
         color: #fff;
         font-weight: 400;
-        font-size: 1rem; 
+        font-size: 0.9em; 
+        padding-left: 0.95em;
+        padding-right: 0.95em;
 
         i {
-            font-size: 1.3rem;
+            font-size: 1.3em;
             vertical-align: sub;
+            margin-right: .3em;
+            opacity: .6;
         }
     }
 }
