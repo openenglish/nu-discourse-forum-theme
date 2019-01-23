@@ -122,6 +122,8 @@ header.d-header {
 
             img#site-logo {
                 height: 100%;
+                max-height: unset;
+                max-width: unset;
             }
         }
     }
