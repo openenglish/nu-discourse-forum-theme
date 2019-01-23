@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'nextu';
-    src:  url('https://cdn.nextu.com/fonts/nextu.eot?dukdu');
-    src:  url('https://cdn.nextu.com/fonts/nextu.eot?dukdu#iefix') format('embedded-opentype'),
-      url('https://cdn.nextu.com/fonts/nextu.ttf?dukdu') format('truetype'),
-      url('https://cdn.nextu.com/fonts/nextu.woff?dukdu') format('woff');
+    src:  url($NextuEOT);
+    src:  url($NextuEOT) format('embedded-opentype'),
+      url($NextuTTF) format('truetype'),
+      url($NextuWOFF) format('woff');
     font-weight: normal;
     font-style: normal;
   }
