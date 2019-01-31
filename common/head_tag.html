@@ -4,7 +4,6 @@
 <script type="text/discourse-plugin" version="0.8.13">
     let currentLocale = I18n.currentLocale();
 
-
     var forum={
     en: settings.forum_en,
     es: settings.forum_es,
@@ -34,12 +33,15 @@ localStorage.setItem("localeInfo", currentLocale);
         }
         currentMenu = menus[locale];
 
+        window.environment = 'prod';
+
         // Change the logo link
         var base_url = "//learn.nextu.com";
         var forum_url = "//forum.nextu.com";
         if (/(stg)/i.test(window.location.href)) {
           base_url = "//learn.stg.nextu.com";
           forum_url = "//forum-stg.nextu.com";
+          window.environment = 'stg';
         }
         $('.d-header .wrap .contents .title a').attr("href", base_url);
 
