@@ -1,27 +1,36 @@
 <script>
-let inlineManualKey;
+  function activateInlineManual() {
+    let inlineManualKey;
 
-switch(window.environment) {
-  case 'stg':
-    inlineManualKey = 'c59c2a75805b25343b020f015efebbfa';
-    break;
+    switch (window.environment) {
+      case 'stg':
+        inlineManualKey = 'c59c2a75805b25343b020f015efebbfa';
+        break;
 
-  default:
-    inlineManualKey = '6f127705aa1e3bf532f6b5f586ce3acc'
-    break;
-}
+      default:
+        inlineManualKey = '6f127705aa1e3bf532f6b5f586ce3acc'
+        break;
+    }
 
-let currentUser = Discourse && Discourse.User && Discourse.User.current();
-let userId = currentUser && currentUser.external_id;
-let language = currentUser && currentUser.locale;
+    let currentUser = Discourse && Discourse.User && Discourse.User.current();
+    let userId = currentUser && currentUser.external_id;
+    let language = currentUser && currentUser.locale;
 
-window.inlineManualTracking = {
-  uid: userId
-}
+    window.inlineManualTracking = {
+      uid: userId
+    }
 
-window.inlineManualOptions = {
-  language: language
-};
+    window.inlineManualOptions = {
+      language: language
+    };
 
-!function(){var e=document.createElement("script"),t=document.getElementsByTagName("script")[0];e.async=1,e.src="https://inlinemanual.com/embed/player." + inlineManualKey + ".js",e.charset="UTF-8",t.parentNode.insertBefore(e,t)}();
+    ! function () {
+      var e = document.createElement("script"),
+        t = document.getElementsByTagName("script")[0];
+      e.async = 1, e.src = "https://inlinemanual.com/embed/player." + inlineManualKey + ".js", e.charset = "UTF-8", t.parentNode
+        .insertBefore(e, t)
+    }();
+  }
+
+  window.setTimeout(activateInlineManual, 1000);
 </script>
