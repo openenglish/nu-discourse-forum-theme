@@ -19,12 +19,13 @@ localStorage.setItem("localeInfo", currentLocale);
 <script>
 
     $(function() {
-
+        const user = Discourse.User.current();
+        const b2b = user.custom_fields && user.custom_fields.b2b === "1";
         let locale = localStorage.getItem("localeInfo");
         menus = {
-            "en": ["Home", "My Profile", "Tutor Café", "Forum"],
-            "es": ["Inicio", "Mi Perfil", "Tutor Café", "Foro"],
-            "pt_BR": ["Página Inicial", "Meu Perfil", "Tutor Café", "Forum"]
+            "en": ["Home", "My Profile", "Tutor Café", "Jobs", "Forum"],
+            "es": ["Inicio", "Mi Perfil", "Tutor Café", "Empleos", "Foro"],
+            "pt_BR": ["Página Inicial", "Meu Perfil", "Tutor Café", "Empregos", "Forum"]
         }
 
 
@@ -49,35 +50,58 @@ localStorage.setItem("localeInfo", currentLocale);
         // Fix the style for clear fix
         $('.d-header .wrap .contents').removeClass('clearfix');
 
-        // Add the top header menu
-        $headerMenuObj = $(`<ul class="nav nav_icons navbar-nav">
-                    <li>
-                        <a href="${base_url}" class="nav-li-home">
-                            <i class="nu-home"></i> ` + currentMenu[0] + `
-                        </a>
-                    </li>
 
-                    <li>
-                        <a href="${base_url}/local/profile/" class="nav-li-your-certs">
-                            <i class="nu-profile"></i> ` + currentMenu[1] + `
-                        </a>
-                    </li>
+        $headerMenu = $(`<ul class="nav nav_icons navbar-nav"></ul>`);
 
-                    <li>
-                        <a href="${base_url}/local/tutorcafe/" class="nav-li-tutor-cafe">
-                            <i class="nu-tutorcafe"></i> ` + currentMenu[2] + `
-                        </a>
-                    </li>
+        $homeMenuItem = $(`
+            <li>
+                <a href="${base_url}" class="nav-li-home">
+                    <i class="nu-home"></i> ` + currentMenu[0] + `
+                </a>
+            </li>
+        `);
+        $headerMenu.append($homeMenuItem);
 
-                    <li>
-                        <a href="${forum_url}" style="color: #19e77a;">
-                            <i class="nu-forum"></i> ` + currentMenu[3] + `
-                        </a>
-                    </li>
+        $profileMenuItem = $(`
+            <li>
+                <a href="${base_url}" class="nav-li-home">
+                    <i class="nu-home"></i> ` + currentMenu[0] + `
+                </a>
+            </li>
+        `);
+        $headerMenu.append($profileMenuItem);
 
-                    </ul>`);
+        $tutorcafeMenuItem = $(`
+            <li>
+                <a href="${base_url}/local/tutorcafe/" class="nav-li-tutor-cafe">
+                    <i class="nu-tutorcafe"></i> ` + currentMenu[2] + `
+                </a>
+            </li>
+        `);
+        $headerMenu.append($tutorcafeMenuItem);
 
-        $('.d-header .wrap .contents .title').append($headerMenuObj);
+        if (!b2b) {
+            $jobsMenuItem = $(`
+                <li>
+                    <a href="${base_url}/local/jobs/" class="nav-li-jobs">
+                        <i class="nu-tutorcafe"></i> ` + currentMenu[3] + `
+                    </a>
+                </li>
+            `);
+            $headerMenu.append($jobsMenuItem);
+        }
+
+        $forumMenuItem = $(`
+            <li>
+                <a href="${forum_url}" style="color: #19e77a;">
+                    <i class="nu-forum"></i> ` + currentMenu[4] + `
+                </a>
+            </li>
+        `);
+        $headerMenu.append($forumMenuItem);
+
+
+        $('.d-header .wrap .contents .title').append($headerMenu);
         // $headerMenuObj.insertBefore('.panel.clearfix');
     });
 
